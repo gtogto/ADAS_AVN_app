@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.bluetoothlegatt"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="24" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1" />
+
+    <application
+        android:configChanges="orientation|keyboardHidden"
+        android:icon="@drawable/keti"
+        android:label="keti_AVN_1"
+        android:theme="@android:style/Theme.Holo.NoActionBar" >
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.DeviceScanActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="KETI AVN_1" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.DeviceControlActivity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+
+        <service
+            android:name="com.example.android.bluetoothlegatt.com.BluetoothLeService"
+            android:enabled="true" />
+
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+        <uses-sdk
+            android:minSdkVersion="18"
+            android:targetSdkVersion="25" />
+
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.map.map_main_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.can_main_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.music.music_main_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.music.carousel_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.music.music_play_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.music.music_play1_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.music.music_play2_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.music.music_play3_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.smart_key.smartKey_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.example.android.bluetoothlegatt.com.bio_status.bio_activity"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape" />
+    </application>
+
+</manifest>
